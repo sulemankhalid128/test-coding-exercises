@@ -4,12 +4,7 @@ export const types = {
 };
 
 let initialState = {
-  tasks: [
-    {
-      name: "new task",
-      id: `${Date.now}`,
-    },
-  ],
+  tasks: [],
 };
 
 const taskReducer = (state = initialState, action) => {

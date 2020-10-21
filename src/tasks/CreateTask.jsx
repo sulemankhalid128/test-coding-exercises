@@ -1,10 +1,17 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { Container, ContainerFluid, Label, Input, Button } from "../Commons";
+import {
+  Container,
+  ContainerFluid,
+  Label,
+  Input,
+  Button,
+  Heading,
+} from "../Commons";
 import { addTask } from "../redux/tasks/actions";
 
 const CreateTask = ({ history }) => {
-  const [taskName, setTaskName] = useState(null);
+  const [taskName, setTaskName] = useState("");
   const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
@@ -15,6 +22,8 @@ const CreateTask = ({ history }) => {
   return (
     <Container>
       <ContainerFluid>
+        <Heading>Create Tasks</Heading>
+
         <form onSubmit={handleSubmit} style={{ textAlign: "left" }}>
           <Label>Task Name:</Label>
           <Input
@@ -26,7 +35,7 @@ const CreateTask = ({ history }) => {
             }}
             value={taskName}
             required
-            autoComplete={false}
+            autoComplete="true"
           />
           <Button type="submit">Save</Button>
         </form>

@@ -25,18 +25,21 @@ export const Heading = styled.h1`
   text-align: left;
 `;
 export const Card = styled.div`
-  font-size: 15px;
-  text-align: center;
   color: black;
   display: flex;
   justify-content: start;
   margin: 20px 0px;
-  border: 1px solid lightgrey;
   padding: 1em;
   border-radius: 10px;
   background: #f8eace;
   box-shadow: 1px 3px #888888;
   font-weight: 500;
+  border: 0;
+  border-left: 5px solid #f8eace;
+
+  &:hover {
+    border-left: 5px solid #d5a139;
+  }
 `;
 
 export const CustomLink = styled(Link)`
@@ -78,7 +81,7 @@ export const Label = styled.label`
 export const Input = styled.input`
   width: 100%;
   font-size: 16px;
-  margin: 10px 0px;
+  margin: 15px 0px;
   height: 35px;
   border: 0;
   background: radial-gradient(#fcf2df, transparent);

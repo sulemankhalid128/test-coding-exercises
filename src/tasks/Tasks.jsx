@@ -31,7 +31,7 @@ const Tasks = () => {
   return (
     <Container>
       <ContainerFluid>
-        <Heading>Tasks here</Heading>
+        <Heading>Tasks List</Heading>
         <div style={{ display: "flex", justifyContent: "space-between" }}>
           <CustomLink to="/create-task">Add Task</CustomLink>
           {selectedIds.length ? (
@@ -39,6 +39,7 @@ const Tasks = () => {
               onClick={() => {
                 dispatch(bulkDelete({ ids: selectedIds }));
               }}
+              title="Delete"
             >
               <img src={deleteIcon} alt="" width="18" />
             </Icon>
